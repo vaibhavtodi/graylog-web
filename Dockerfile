@@ -26,7 +26,7 @@ COPY            entrypoint.sh        /entrypoint.sh
 
 # Setting up the Graylog Server Configuration
 RUN         sed -i 's/gw_graylog_server_uri/"http:\/\/0\.0\.0\.0:12900\/"/'              /etc/graylog/web/web.conf \
-      &&    sed -i 's/gw_application_secret/"lGOVlXDzWwfkvyjwiYgN11ASGxBJpX0VWpLTiDrDVfOHdx2nOa3bplnNTHt1hx8PRfs2CjAfrlwPFBHHwrJFPNVTTjeUS9qZ"/' /etc/graylog/web/web.conf                    \
+      &&    sed -i 's/gw_application_secret/"lGOVlXDzWwfkvyjwiYgN11ASGxBJpX0VWpLTiDrDVfOHdx2nOa3bplnNTHt1hx8PRfs2CjAfrlwPFBHHwrJFPNVTTjeUS9qZ"/' /etc/graylog/web/web.conf
 
 # Cleaning the Docker image
 RUN         apt-get   -y    clean                                                                                   \
